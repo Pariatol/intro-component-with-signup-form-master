@@ -1,0 +1,233 @@
+:root {
+    --main-bg-color: hsl(0, 100%, 74%);
+  }
+
+html{
+    font-size:16px;
+}
+
+body{
+    margin:0;
+    padding:0;
+    font-family: 'Poppins', sans-serif;
+    background: url('./images/bg-intro-desktop.png');
+    background-color: var(--main-bg-color);
+    height:100vh;
+    display:flex;
+}
+
+.header{
+    color:#f7f7f7;
+    height:100vh;
+    width:50%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.headerContent{
+    padding-left:15%;
+    padding-right:8%;
+    
+}
+
+h1{
+    font-weight:700;
+    font-size:2.5rem;
+    line-height: 2.5rem;
+}
+
+.inputs{
+    height:100vh;
+    width:50%;
+    display:flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+}
+
+form{
+    background-color: white;
+    width:70%;
+    margin-left:2%;
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    border-radius:0.5rem;
+    box-shadow: 1px 6px 1px rgba(126, 123, 123, 0.5);
+}
+
+input{
+    width:85%;
+    height:2.6rem;
+    color:rgb(80, 77, 77);
+    font-weight:600;
+    padding-left:5%;
+    margin-top:1.5rem;
+    border:1px solid hsl(246, 25%, 77%);
+    border-radius:0.3rem;
+}
+
+input:nth-of-type(1){
+    margin-top:2rem;
+}
+
+input[type="text"]:focus-within{
+    border:1px solid hsl(249, 10%, 26%) ;
+    color:hsl(249, 10%, 26%);
+    outline:none;
+}
+
+input[type="email"]:focus-within{
+    border:1px solid hsl(249, 10%, 26%) ;
+    color:hsl(249, 10%, 26%);
+    outline:none;
+}
+
+input[type="password"]:focus-within{
+    border:1px solid hsl(249, 10%, 26%) ;
+    outline:none;
+}
+
+input[type="submit"]{
+    width:91%;
+    height:2.7rem;
+    background-color: hsl(154, 59%, 51%);
+    color:white;
+    border:none;
+    font-weight:500;
+    padding:1rem;
+    box-shadow: 0px 2px 1px hsl(154, 40%, 52%);
+
+}
+
+
+.notification{
+    font-size:0.6rem;
+    color:rgb(155, 146, 146);
+    margin-bottom:2rem;
+}
+
+.termsAndServices{
+    color:var(--main-bg-color);
+    font-weight:700;
+}
+
+button{
+    border-radius:0.5rem;
+    margin-left:2%;
+    background-color: hsl(248, 32%, 49%);
+    padding:1rem;
+    border:none;
+    color:white;
+    width:70%;
+    margin-bottom:1.5rem;
+    box-shadow: 1px 6px 1px rgba(126, 123, 123, 0.5);
+}
+
+strong{
+    font-weight:700;
+}
+
+.errorMsg{
+    color:var(--main-bg-color);
+    margin-top:.3rem;
+    margin-bottom:0;
+    width:85%;
+    text-align: right;
+    font-style:italic;
+    font-size:.7rem;
+    font-weight:600;
+}
+
+.errorFirstName, .errorLastName,.errorEmail,.errorPassword{
+    display:none;
+}
+
+.errorBorder{
+    border:2px solid var(--main-bg-color);
+}
+
+.wrapper{
+    position:relative;
+    width:100%;
+    left:5%;
+}
+
+.fas{
+    visibility: hidden;
+    position:absolute;
+    bottom:0.9rem;
+    right:4rem;
+    color:var(--main-bg-color);
+    font-size:1.3rem;
+}
+
+.redPlaceholder::-webkit-input-placeholder {
+    color: var(--main-bg-color);
+ }
+
+ .transparentPlaceholder::-webkit-input-placeholder {
+    color: transparent;
+ }
+
+ @media(max-width:415px){
+     body{
+         flex-direction:column;
+         height:auto;
+         background: url('./images/bg-intro-mobile.png');
+         background-color: var(--main-bg-color);
+
+     }
+
+     .header{
+         width:100%;
+         height:auto;
+     }
+
+     .inputs{
+         width:100%;
+         height:auto;
+         align-items:center;
+     }
+
+     form{
+         width:90%;
+         margin-left:0%;
+     }
+
+     button{
+         width:90%;
+         padding-left:5rem;
+         padding-right:5rem;
+         line-height:1.3rem;
+     }
+
+     h1{
+         margin-top:5rem;
+         font-size:1.8rem;
+         text-align:center;
+     }
+
+     .headerContent{
+         padding-left:0;
+         padding-right:0;
+     }
+
+     .description{
+         text-align:center;
+         margin-bottom:4rem;
+     }
+
+     form{
+         margin-bottom:2rem;
+     }
+
+     .notification{
+        text-align:center;
+        padding-left:2.1rem;
+        padding-right:2.1rem;
+        line-height:1.3rem;
+     }
+ }
